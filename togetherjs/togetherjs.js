@@ -12,6 +12,8 @@
     dontShowClicks: false,
     // Experimental feature to echo clicks to certain elements across clients:
     cloneClicks: false,
+    // Don't show or send information about the cursor
+    dontShowCursor: false,
     // Enable Mozilla or Google analytics on the page when TogetherJS is activated:
     // FIXME: these don't seem to be working, and probably should be removed in favor
     // of the hub analytics

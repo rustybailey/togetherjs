@@ -17,6 +17,11 @@ define(["jquery", "ui", "util", "session", "elementFinder", "tinycolor", "eventM
   var SCROLL_UPDATE_CUTOFF = 2000;
 
   session.hub.on("cursor-update", function (msg) {
+    var dontShowCursor = TogetherJS.config.get("dontShowCursor");
+    
+    if (dontShowCursor) {
+      return;
+    }
     if (msg.sameUrl) {
       Cursor.getClient(msg.clientId).updatePosition(msg);
     } else {
