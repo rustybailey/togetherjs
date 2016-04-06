@@ -182,6 +182,16 @@ define(["require", "jquery", "util", "session", "templates", "templating", "link
       }
     });
 
+    TogetherJS.config.track("hideShareButton", function (hide, previous) {
+      if (hide && ! previous) {
+        ui.container.find("#togetherjs-share-button").hide();
+        adjustDockSize(-1);
+      } else if ((! hide) && previous) {
+        ui.container.find("#togetherjs-share-button").show();
+        adjustDockSize(1);
+      }
+    });
+
   };
 
   // After prepareUI, this actually makes the interface live.  We have

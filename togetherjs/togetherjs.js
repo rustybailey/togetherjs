@@ -53,6 +53,8 @@
     suppressJoinConfirmation: false,
     // If true, then the "Invite a friend" window won't automatically come up
     suppressInvite: false,
+    // If true, share button is hidden from dock
+    hideShareButton: false,
     // A room in which to find people to invite to this session,
     inviteFromRoom: null,
     // This is used to keep sessions from crossing over on the same
