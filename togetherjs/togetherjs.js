@@ -55,6 +55,8 @@
     suppressJoinConfirmation: false,
     // If true, then the "Invite a friend" window won't automatically come up
     suppressInvite: false,
+    // If true, initial walkthrough will not show
+    suppressWalkthrough: false,
     // If true, share button is hidden from dock
     hideShareButton: false,
     // A room in which to find people to invite to this session,

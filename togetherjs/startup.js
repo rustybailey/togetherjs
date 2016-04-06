@@ -99,7 +99,7 @@ define(["util", "require", "jquery", "windowing", "storage"], function (util, re
 
     walkthrough: function (next) {
       storage.settings.get("seenIntroDialog").then(function (seenIntroDialog) {
-        if (seenIntroDialog) {
+        if (seenIntroDialog || TogetherJS.config.get("suppressWalkthrough")) {
           next();
           return;
         }
